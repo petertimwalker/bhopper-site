@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bhopper — Privacy Policy</title>
+    <style>
+      :root {
+        --red: #bd3039;
+        --navy: #0c2340;
+        --cream: #f5f2ea;
+        --slate: #5c6470;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--cream);
+        color: var(--navy);
+        font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", Helvetica, Arial, sans-serif;
+      }
+      main { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+      h1 { color: var(--red); font-size: 2rem; margin: 0 0 8px; }
+      h2 { color: var(--navy); font-size: 1.25rem; margin: 32px 0 8px; }
+      p, li { margin: 0 0 12px; }
+      ul { padding-left: 24px; }
+      a { color: var(--red); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .meta { color: var(--slate); font-size: 0.9rem; }
+      .back { display: inline-block; margin-bottom: 16px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="/bhopper-site/">← Bhopper</a>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective: 18 May 2026. Last updated: 18 May 2026.</p>
+
+      <p>
+        Bhopper is an iPhone app that shows live, crowd-sourced cover charges and wait times at Boston
+        bars. This policy explains exactly what the app collects, why, and how to delete it.
+      </p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li>
+          <strong>An anonymous device identifier.</strong> When you first launch Bhopper, the app
+          generates a random UUID and stores it in the iOS Keychain. This UUID is the only thing
+          that ties your submitted reports to "you". We never collect a name, email, phone number,
+          or any identifier you'd recognize as yourself.
+        </li>
+        <li>
+          <strong>Your approximate proximity to a bar at the moment of a post.</strong> If you grant
+          location permission and submit a Cover or Wait report, the app classifies how close you
+          are to the bar into a coarse tier (verified ≤150 m, nearby ≤1 km, remote &gt;1 km, or
+          unknown if location was denied). Only this tier is stored. The raw latitude and longitude
+          are discarded as soon as the tier is computed.
+        </li>
+        <li>
+          <strong>The cover and wait values you submit.</strong> Stored as a numeric bucket (e.g.
+          "$5" cover, "10–30 min" wait) together with the bar, the time, your anonymous device
+          UUID, and the proximity tier.
+        </li>
+      </ul>
+
+      <h2>What we do not collect</h2>
+      <ul>
+        <li>No name, email, phone, address, or other personal contact information.</li>
+        <li>No raw GPS coordinates or location history — only the discrete proximity tier above.</li>
+        <li>No third-party analytics, no advertising SDKs, no cross-app tracking.</li>
+        <li>No contacts, photos, microphone, calendar, or health data.</li>
+        <li>No payment information; Bhopper has no purchases or subscriptions.</li>
+      </ul>
+
+      <h2>Why we collect it</h2>
+      <p>
+        The anonymous device UUID and proximity tier exist so we can aggregate many reports into a
+        single trustworthy estimate (e.g. "$5 cover at this bar, 8 minutes ago"). The UUID also lets
+        you delete every report you've ever submitted (see "Deleting your data" below).
+      </p>
+
+      <h2>Where it's stored</h2>
+      <p>
+        Reports are stored in our backend hosted on Supabase. The app communicates with the backend
+        exclusively over HTTPS using Apple's standard URLSession. Your anonymous UUID lives in the
+        iOS Keychain on your device.
+      </p>
+
+      <h2>Who we share it with</h2>
+      <p>
+        We do not sell, rent, or share your data with anyone. We also do not send your data to any
+        advertising or analytics network. The cover and wait values you submit are visible to other
+        Bhopper users in aggregated form — that is the entire purpose of the app — but they are
+        never attributed to a name or visible identity.
+      </p>
+
+      <h2>Deleting your data</h2>
+      <p>
+        Open Bhopper, tap the <strong>Me</strong> tab, scroll to the bottom, and tap
+        <strong>Delete my data</strong>. This permanently deletes every report you've ever
+        submitted from our backend, clears your local favorites, and resets the device UUID to a
+        fresh value. The action cannot be undone.
+      </p>
+      <p>
+        You can also email us at the address below and we'll process the same deletion on your
+        behalf.
+      </p>
+
+      <h2>Children's privacy</h2>
+      <p>
+        Bhopper is rated 17+ on the App Store because of the bar / alcohol subject matter. It is
+        not directed at children under 13, and we do not knowingly collect data from anyone under
+        13.
+      </p>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If we change this policy, we'll update the "Last updated" date at the top of this page and,
+        for material changes, surface a notice inside the app on next launch.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Privacy or data questions: <a href="mailto:peter@cartage.ai">peter@cartage.ai</a>.
+      </p>
+    </main>
+  </body>
+</html>
